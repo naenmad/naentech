@@ -23,7 +23,7 @@ export function EnhancedLoading() {
 
     useEffect(() => {
         if (!isMounted) return;
-        
+
         const timer = setInterval(() => {
             setProgress(prev => {
                 if (prev >= 100) {
@@ -40,7 +40,7 @@ export function EnhancedLoading() {
 
     useEffect(() => {
         if (!isMounted) return;
-        
+
         const stepTimer = setInterval(() => {
             setCurrentStep(prev => {
                 if (prev >= loadingSteps.length - 1) {
@@ -67,9 +67,9 @@ export function EnhancedLoading() {
             >
                 {/* Animated Background */}
                 <div className="absolute inset-0">
-                    <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-                    <div className="absolute top-40 right-20 w-72 h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-                    <div className="absolute -bottom-8 left-40 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+                    <div className="absolute top-10 left-4 sm:top-20 sm:left-20 w-48 h-48 sm:w-72 sm:h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+                    <div className="absolute top-20 right-4 sm:top-40 sm:right-20 w-48 h-48 sm:w-72 sm:h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+                    <div className="absolute -bottom-8 left-8 sm:left-40 w-48 h-48 sm:w-72 sm:h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
                 </div>
 
                 <div className="relative z-10 text-center">
@@ -90,7 +90,7 @@ export function EnhancedLoading() {
                     </motion.div>
 
                     {/* Loading Animation */}
-                    <div className="w-80 mx-auto mb-6">
+                    <div className="w-64 sm:w-80 mx-auto mb-6">
                         {/* Progress Bar */}
                         <div className="w-full bg-gray-700 rounded-full h-2 mb-4 overflow-hidden">
                             <motion.div

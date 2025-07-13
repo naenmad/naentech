@@ -35,7 +35,7 @@ export default function ParallaxScroll({
 
     // Calculate transform values based on direction
     const distance = speed * 100;
-    
+
     const transformUp = useTransform(smoothProgress, [0, 1], [distance + offset, -distance + offset]);
     const transformDown = useTransform(smoothProgress, [0, 1], [-distance + offset, distance + offset]);
     const transformLeft = useTransform(smoothProgress, [0, 1], [distance + offset, -distance + offset]);
@@ -43,10 +43,10 @@ export default function ParallaxScroll({
     const transformDefault = useTransform(smoothProgress, [0, 1], [distance + offset, -distance + offset]);
 
     const transform = direction === "up" ? transformUp :
-                     direction === "down" ? transformDown :
-                     direction === "left" ? transformLeft :
-                     direction === "right" ? transformRight :
-                     transformDefault;
+        direction === "down" ? transformDown :
+            direction === "left" ? transformLeft :
+                direction === "right" ? transformRight :
+                    transformDefault;
 
     const getMotionStyle = () => {
         if (direction === "left" || direction === "right") {

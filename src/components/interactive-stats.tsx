@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
-import { 
-    AcademicCapIcon, 
-    CodeBracketIcon, 
-    ClockIcon, 
+import {
+    AcademicCapIcon,
+    CodeBracketIcon,
+    ClockIcon,
     StarIcon,
     TrophyIcon
 } from "@heroicons/react/24/outline";
